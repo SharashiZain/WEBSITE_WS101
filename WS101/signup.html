@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>SIGN UP</h1>
+        <form action="signup.php" method="post" class="signup-form">
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required autocomplete="off">
+                <span class="persistent-placeholderone">________________</span>
+            </div>
+
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="off">
+                <span class="persistent-placeholdertwo">________________</span>
+            </div>
+
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autocomplete="off">
+                <span class="persistent-placeholderthree">________________</span>
+            </div>
+
+            <div class="input-container">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword">
+                <span class="persistent-placeholderfour">________________</span>
+            </div>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+         <p class="signup-text">
+            <span>Already have an account?</span><br>
+            <a href="login.html">Login</a>
+        </p>
+    </div>
+</body>
+</html>

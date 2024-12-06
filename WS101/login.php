@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error preparing statement: " . $conn->error;  
     }
 
-    echo '<br><br><a href="index.html"><button>Return to Form</button></a>';
+    echo '<br><br><a href="homepage.html"><button>Return to Form</button></a>';
     $conn->close();  
 }
 ?>

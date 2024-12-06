@@ -1,0 +1,102 @@
+
+create database groupseven_db;
+
+
+blog:
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| post_id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| title      | varchar(255) | NO   |     | NULL    |                |
+| content    | mediumtext   | NO   |     | NULL    |                |
+| author_id  | int(11)      | NO   | MUL | NULL    |                |
+| created_at | datetime     | NO   |     | NULL    |                |
+| update_at  | datetime     | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+CREATE TABLE blog_tbl (
+    post_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content MEDIUMTEXT NOT NULL,
+    author_id INT(11) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (author_id) REFERENCES signup_tbl(ACC_ID) ON DELETE CASCADE
+);
+
+forum:
++------------+------------+------+-----+---------------------+----------------+
+| Field      | Type       | Null | Key | Default             | Extra          |
++------------+------------+------+-----+---------------------+----------------+
+| comment_id | int(11)    | NO   | PRI | NULL                | auto_increment |
+| post_id    | int(11)    | NO   | MUL | NULL                |                |
+| author_id  | int(11)    | NO   | MUL | NULL                |                |
+| content    | mediumtext | NO   |     | NULL                |                |
+| created_at | datetime   | YES  |     | current_timestamp() |                |
++------------+------------+------+-----+---------------------+----------------+
+
+CREATE TABLE forum_tbl (
+    comment_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    post_id INT(11) NOT NULL,
+    author_id INT(11) NOT NULL,
+    content MEDIUMTEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES blog_tbl(post_id) ON DELETE CASCADE,
+    FOREIGN KEY (author_id) REFERENCES signup_tbl(ACC_ID) ON DELETE CASCADE
+);
+
+login:
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| ACC_ID   | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(255) | NO   |     | NULL    |                |
+| Password | varchar(255) | NO   |     | NULL    |                |
+| Email    | varchar(255) | NO   | UNI | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+CREATE TABLE login_tbl (
+    ACC_ID INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE
+);
+
+signup:
++------------+--------------+------+-----+---------------------+----------------+
+| Field      | Type         | Null | Key | Default             | Extra          |
++------------+--------------+------+-----+---------------------+----------------+
+| ACC_ID     | int(11)      | NO   | PRI | NULL                | auto_increment |
+| Name       | varchar(255) | NO   |     | NULL                |                |
+| Password   | varchar(255) | NO   |     | NULL                |                |
+| Email      | varchar(255) | NO   |     | NULL                |                |
+| Created_At | timestamp    | NO   |     | current_timestamp() |                |
++------------+--------------+------+-----+---------------------+----------------+
+
+CREATE TABLE signup_tbl (
+    ACC_ID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Created_At TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+vote:
++------------+-------------------+------+-----+---------------------+----------------+
+| Field      | Type              | Null | Key | Default             | Extra          |
++------------+-------------------+------+-----+---------------------+----------------+
+| vote_id    | int(11)           | NO   | PRI | NULL                | auto_increment |
+| post_id    | int(11)           | NO   | MUL | NULL                |                |
+| user_id    | int(11)           | NO   | MUL | NULL                |                |
+| vote_type  | enum('up','down') | NO   |     | NULL                |                |
+| created_at | datetime          | YES  |     | current_timestamp() |                |
++------------+-------------------+------+-----+---------------------+----------------+
+
+CREATE TABLE vote_tbl (
+    vote_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    post_id INT(11) NOT NULL,
+    user_id INT(11) NOT NULL,
+    vote_type ENUM('up', 'down') NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES blog_tbl(post_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES signup_tbl(ACC_ID) ON DELETE CASCADE
+);

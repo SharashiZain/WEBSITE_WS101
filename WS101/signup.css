@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Press Start 2P'; 
+    src: url('fonts/PressStart2P-Regular.ttf') format('truetype'); 
+  }
+  
+  * { 
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif; 
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url(PICTURES/WSWS.png);
+      background-position: center;
+      background-size: cover; 
+  
+  }
+  
+  .signup-container {
+      position: relative;
+      background-image: url(PICTURES/Scroll.png);
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: auto;
+      height: auto;
+      max-width: 500px;
+      max-height: 1200px;
+      text-align: center;
+      color: #7d3e02;
+  }
+  
+  h1 {
+      font-size: 38px;
+      margin-top: 2.5rem;
+  }
+  
+  .signup-form label {
+      display: block;
+      text-align: left;
+      width: 500px;
+      left: 50px;
+      font-weight: bold;
+      font-display: block;
+      margin-bottom: 0.5rem;
+      margin-right: 100px;
+      margin-left: 80px;
+      margin-top: -1.0rem;
+      font-size: 17px;
+  }
+  
+  
+  .signup-form input {
+      width: 65%;
+      padding: 0.8rem;
+      margin-bottom: 1.0rem;
+      margin-left: -5px;
+      top: 20%;
+      border: 2px solid transparent   ;
+      border-radius: 40px;
+      font-size: 1rem;
+      background: transparent;
+      font-size: 16px;
+      outline: #7d3e02;
+      color: #7d3e02;
+  }
+  
+  .signup-btn {
+      position: absolute;
+      width: 100%;
+      left: 0px;
+      bottom: 76px;
+      padding: 0.8rem;
+      background-color: transparent;
+      background-image: url(PICTURES/Button.png);
+      background-size: 200px;
+      background-repeat: no-repeat; 
+      background-position: center;
+      border: none;
+      border-radius: 4px;
+      color: #7d3e02;
+      font-size: large;
+      outline: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  .signup-inputlabel {
+      font-size: 20px;
+  }
+  
+  .signup-text {
+      text-align: center;
+      bottom: 7px;
+      margin-top: 30px;
+      width: 100%;
+      font-size: 12px;
+      color: black;
+  }
+  
+  .signup-text span {
+      display: block; 
+      margin-bottom: -8px; 
+      color: #7d3e02;
+  }
+  
+  .signup-text a {
+      display: block;
+      color:#7d3e02;
+      font-weight: 600;
+      text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+      text-decoration: none;
+  }
+  
+  .persistent-placeholderone {
+      position: absolute;
+      font-weight: bold;
+      left: 87px;
+      bottom: 325px;
+      width: 65%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: transparent;
+      font-size: 16px;
+      color: #7d3e02;
+      pointer-events: none;
+  }
+  
+  .persistent-placeholdertwo {
+      position: absolute;
+      font-weight: bold; 
+      left: 87px;
+      bottom: 255px;
+      width: 65%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: transparent;
+      font-size: 16px;
+      color: #7d3e02;
+      pointer-events: none;
+  }
+  
+  .persistent-placeholderthree {
+      position: absolute; 
+      font-weight: bold;
+      left: 87px;
+      bottom: 185px;
+      width: 65%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: transparent;
+      font-size: 16px;
+      color: #7d3e02;
+      pointer-events: none;
+  }
+  
+  .persistent-placeholderfour {
+      position: absolute; 
+      font-weight: bold;
+      left: 87px;
+      bottom: 118px;
+      width: 65%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: transparent;
+      font-size: 16px;
+      color: #7d3e02;
+      pointer-events: none;
+  }

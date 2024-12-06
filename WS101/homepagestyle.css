@@ -1,0 +1,352 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navbar styles */
+  .navbar2 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+    text-align: center;
+    
+  }
+  
+  
+  .navbar2 nav {
+    display: inline-block;
+    margin-right: 20px;
+
+  }
+  
+  .navbar2 ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar2 ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar2 ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar2 ul li a:hover {
+    background-color: #555;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 50px 20px;
+    min-height: 100vh;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+  }
+
+  
+
+  
+  
+  
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation ul li {
+  margin-left: 20px;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.search-signin input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search-signin a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://via.placeholder.com/1200x500');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero .cta {
+  background-color: #ff6f61;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Grid Section */
+section h2 {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 32px;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 300px;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.item a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Updates Section */
+.updates-section {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.updates .update-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.updates .update-item a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 50px 20px;
+}
+
+.cta-section input {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.cta-section button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

@@ -3,10 +3,10 @@ require_once 'db.connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
-    $name = $_POST['name'];
+    $name = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+    $confirm_password = $_POST['confirmpassword'];
 
     if (empty($name) || empty($email) || empty($password) || empty($confirm_password)) {
         echo "All fields are required.";
@@ -46,8 +46,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error preparing statement: " . $conn->error;
     }
 
-    echo '<br><br><a href="index.html"><button>Return to Form</button></a>';
+    echo '<br><br><a href="homepage.html"><button>Return to Form</button></a>';
     // Close the connection
     $conn->close();
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Signup successful! You will be redirected to the homepage shortly.</h2>
+    <script>
+        setTimeout(function() {
+            window.location.href = "homepage.html";
+        }, 3000);
+    </script>
+</body>
+</html>
+
+
