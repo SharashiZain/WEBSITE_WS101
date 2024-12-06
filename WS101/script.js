@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+        
     //not working na pala
     // pipli ng item dito 
     const menuItems = document.querySelectorAll('.menu-item');
