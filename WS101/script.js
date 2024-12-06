@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    
-    //not working
+    //not working na pala
     // pipli ng item dito 
     const menuItems = document.querySelectorAll('.menu-item');
     const aboutUsHeading = document.querySelector('.aboutus h1');

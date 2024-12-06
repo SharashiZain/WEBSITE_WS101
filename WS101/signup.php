@@ -14,7 +14,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($password !== $confirm_password) {
-        echo "Passwords do not match.";
+        ?>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Signup Attempt</title>
+            <style>
+                @font-face {
+                            font-family: 'Press Start 2P'; 
+                            src: url('fonts/PressStart2P-Regular.ttf') format('truetype'); 
+                        }
+                body {
+                    font-family: 'Press Start 2P';
+                    text-align: center;
+                    margin-top: 100px;
+                    background-image: url(PICTURES/WSWS.png);
+                    background-position: auto;
+                    background-size: cover;
+                    color: #fff; /* Changed text color to white */
+                }
+                button {
+                    font-family: 'Press Start 2P';
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    color: #fff;
+                    background-color: #D2B48C; /* Changed button color to a brown shade */
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            </style>
+        </head>
+        <body>
+            <h2>Passwords do not match. Please try again.</h2>
+            <button onclick="window.location.href='signup.html'">Back to Signup</button>
+        </body>
+        </html>
+        <?php
         exit;
     }
 
@@ -25,8 +61,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo "Error: Email or Name already exists.";
-        $stmt->close();
+        ?>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Signup Attempt</title>
+            <style>
+                @font-face {
+                            font-family: 'Press Start 2P'; 
+                            src: url('fonts/PressStart2P-Regular.ttf') format('truetype'); 
+                        }
+                body {
+                    font-family: 'Press Start 2P';
+                    text-align: center;
+                    margin-top: 100px;
+                    background-image: url(PICTURES/WSWS.png);
+                    background-position: auto;
+                    background-size: cover;
+                    color: #fff; /* Changed text color to white */
+                }
+                button {
+                    font-family: 'Press Start 2P';
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    color: #fff;
+                    background-color: #D2B48C; /* Changed button color to a brown shade */
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            </style>
+        </head>
+        <body>
+            <h2>Email or username already exists. Please try again.</h2>
+            <button onclick="window.location.href='signup.html'">Back to Signup</button>
+        </body>
+        </html>
+        <?php
         exit;
     }
     $stmt->close();
@@ -45,8 +116,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error preparing statement: " . $conn->error;
     }
-
-    echo '<br><br><a href="homepage.html"><button>Return to Form</button></a>';
     // Close the connection
     $conn->close();
 }
@@ -57,12 +126,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Signup Successful</title>
     <style>
+         @font-face {
+                            font-family: 'Press Start 2P'; 
+                            src: url('fonts/PressStart2P-Regular.ttf') format('truetype'); 
+                        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Press Start 2P';
             text-align: center;
             margin-top: 100px;
+            background-image: url(PICTURES/WSWS.png);
+            background-position: auto;
+            background-size: cover;
+            color: #fff; /* Changed text color to white */
         }
         button {
+            font-family:'Press Start 2P';
             padding: 10px 20px;
             font-size: 16px;
             color: #fff;
@@ -82,5 +160,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
 </body>
 </html>
-
-
